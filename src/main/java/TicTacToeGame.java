@@ -26,16 +26,16 @@ public class TicTacToeGame {
     }
 
     public void changePlayer() {
-        if (currentPlayerMark == 'X') {
-            currentPlayerMark = 'O';
+        if (this.getCurrentPlayerMark() == 'X') {
+            this.setCurrentPlayerMark('O');
         }else {
-            currentPlayerMark = 'X';
+            this.setCurrentPlayerMark('X');
         }
     }
 
     public boolean isPlaceMark(int row, int col) {
         if (board[row][col] == '-') {
-            board[row][col] = currentPlayerMark;
+            board[row][col] = this.getCurrentPlayerMark();
         }
         return true;
     }
