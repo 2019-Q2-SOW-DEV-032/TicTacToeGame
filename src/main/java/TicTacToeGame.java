@@ -76,4 +76,8 @@ public class TicTacToeGame {
         }
         return false;
     }
+
+    public boolean checkForWin() {
+        return (checkRowsForWin() || checkColumnsForWin() || checkDiagonalsForWin());
+    }
 }

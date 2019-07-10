@@ -81,4 +81,12 @@ public class TicTacToeGameTest {
         assertTrue(ticTacToeGame.checkDiagonalsForWin());
     }
 
+    @Test
+    public void test_checkForWin_whenSimilarThreeMarksInARowOrColOrDiagonal_thenItsAWin(){
+        ticTacToeGame.board[0][0] = 'O';
+        ticTacToeGame.board[1][1] = 'X';
+        ticTacToeGame.board[2][2] = 'O';
+        assertFalse(ticTacToeGame.checkForWin());
+    }
+
 }
