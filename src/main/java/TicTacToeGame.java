@@ -89,7 +89,7 @@ public class TicTacToeGame {
         return true;
     }
 
-    protected char checkWinner() {
+    protected char checkWinOrTie() {
         char gameStatus = 'X';
         if(isBoardFull() && !checkForWin()){
             gameStatus = 'T';
