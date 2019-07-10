@@ -131,4 +131,26 @@ public class TicTacToeGameTest {
         assertEquals('X',ticTacToeGame.checkWinner());
     }
 
+    @Test
+    public void test_checkTie(){
+        ticTacToeGame.isPlaceMark(0,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(0,1);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(0,2);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(1,1);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(1,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(2,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(2,1);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(2,2);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(1,2);
+        assertEquals('T',ticTacToeGame.checkWinner());
+    }
+
 }

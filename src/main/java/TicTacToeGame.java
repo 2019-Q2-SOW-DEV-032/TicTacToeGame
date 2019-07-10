@@ -91,7 +91,9 @@ public class TicTacToeGame {
 
     protected char checkWinner() {
         char gameStatus = 'X';
-        if(checkForWin()){
+        if(isBoardFull() && !checkForWin()){
+            gameStatus = 'T';
+        }else if(checkForWin()){
             gameStatus = this.getCurrentPlayerMark();
         }
         return gameStatus;
