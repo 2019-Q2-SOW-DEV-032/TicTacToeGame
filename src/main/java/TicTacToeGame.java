@@ -88,4 +88,12 @@ public class TicTacToeGame {
         }
         return true;
     }
+
+    protected char checkWinner() {
+        char gameStatus = 'X';
+        if(checkForWin()){
+            gameStatus = this.getCurrentPlayerMark();
+        }
+        return gameStatus;
+    }
 }

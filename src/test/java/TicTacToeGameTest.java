@@ -117,4 +117,18 @@ public class TicTacToeGameTest {
         assertFalse(ticTacToeGame.isBoardFull());
     }
 
+    @Test
+    public void test_checkWinner(){
+        ticTacToeGame.isPlaceMark(0,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(1,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(0,1);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(2,0);
+        ticTacToeGame.changePlayer();
+        ticTacToeGame.isPlaceMark(0,2);
+        assertEquals('X',ticTacToeGame.checkWinner());
+    }
+
 }
