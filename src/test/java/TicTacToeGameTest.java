@@ -54,7 +54,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.board[0][0] = 'x';
         ticTacToeGame.board[0][1] = 'x';
         ticTacToeGame.board[0][2] = 'x';
-        assertTrue(ticTacToeGame.checkRowsForWin());
+        assertTrue(ticTacToeGame.checkForWin());
     }
 
     @Test
@@ -62,7 +62,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.board[0][0] = 'X';
         ticTacToeGame.board[0][1] = 'O';
         ticTacToeGame.board[0][2] = 'X';
-        assertFalse(ticTacToeGame.checkRowsForWin());
+        assertFalse(ticTacToeGame.checkForWin());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.board[0][0] = 'X';
         ticTacToeGame.board[1][0] = 'X';
         ticTacToeGame.board[2][0] = 'X';
-        assertTrue(ticTacToeGame.checkColumnsForWin());
+        assertTrue(ticTacToeGame.checkForWin());
     }
 
     @Test
@@ -78,7 +78,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.board[0][0] = 'O';
         ticTacToeGame.board[1][1] = 'O';
         ticTacToeGame.board[2][2] = 'O';
-        assertTrue(ticTacToeGame.checkDiagonalsForWin());
+        assertTrue(ticTacToeGame.checkForWin());
     }
 
     @Test
