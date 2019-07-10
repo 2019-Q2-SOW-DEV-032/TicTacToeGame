@@ -39,4 +39,9 @@ public class TicTacToeGameTest {
         }
     }
 
+    @Test
+    public void test_placeMark_whenPlayerPlaceMarkInAnEmptyPosition_thenTheGameAllowsToMarkThatPosition(){
+        assertTrue(ticTacToeGame.isPlaceMark(1,2) );
+    }
+
 }

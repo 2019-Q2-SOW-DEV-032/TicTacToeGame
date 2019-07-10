@@ -32,4 +32,11 @@ public class TicTacToeGame {
             currentPlayerMark = 'X';
         }
     }
+
+    public boolean isPlaceMark(int row, int col) {
+        if (board[row][col] == '-') {
+            board[row][col] = currentPlayerMark;
+        }
+        return true;
+    }
 }
