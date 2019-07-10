@@ -34,11 +34,10 @@ public class TicTacToeGame {
     }
 
     public boolean isPlaceMark(int row, int column) {
-        if ((row >= 0) && (row < 3)&& ((column >= 0) && (column < 3))) {
-            if (board[row][column] == '-') {
-                board[row][column] = this.getCurrentPlayerMark();
-                return true;
-            }return false;
-        }return false;
+        if ((row >= 0) && (row < 3)&& ((column >= 0) && (column < 3)) && (board[row][column] == '-')) {
+            board[row][column] = currentPlayerMark;
+            return true;
+        }
+        return false;
     }
 }
