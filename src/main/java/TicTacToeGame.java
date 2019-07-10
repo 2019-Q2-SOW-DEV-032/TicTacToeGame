@@ -70,11 +70,8 @@ public class TicTacToeGame {
         return false;
     }
 
-    private boolean checkWinningPattern(char c1, char c2, char c3){
-        if (c1 != '-' && c2 != '-' && c3 != '-'){
-            return (( c1 != '-' && c1 == c2 && c1 == c3));
-        }
-        return false;
+    private boolean checkWinningPattern(char mark1, char mark2, char mark3) {
+        return !(mark1 == '-') && ((mark1 != '-' && mark1 == mark2 && mark1 == mark3));
     }
 
     public boolean checkForWin() {
