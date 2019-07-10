@@ -2,19 +2,16 @@ package TicTacToe;
 
 public class TicTacToeGame {
     private char currentPlayerMark;
-    private char board;
+    public char[][] board;
 
     public TicTacToeGame() {
         currentPlayerMark = 'X';
-        board = '-';
-    }
-
-    public char getBoard() {
-        return board;
-    }
-
-    public void setBoard(char placeMark) {
-        this.board = placeMark;
+        board = new char[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                board[i][j] = '-';
+            }
+        }
     }
 
     public char getCurrentPlayerMark() {

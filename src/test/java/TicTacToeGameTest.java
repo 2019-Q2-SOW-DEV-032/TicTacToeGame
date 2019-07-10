@@ -31,14 +31,12 @@ public class TicTacToeGameTest {
     }
 
     @Test
-    public void test_checkTheBoardIsReady_beforeTheFirstInput(){
-        assertEquals('-',ticTacToeGame.getBoard());
-    }
-
-    @Test
-    public void test_checkTheBoardIsReady_ForTheFirstInputX(){
-        ticTacToeGame.setBoard(ticTacToeGame.getCurrentPlayerMark());
-        assertEquals('X',ticTacToeGame.getBoard());
+    public void test_makeSureThatTheBoardIsEmpty_BeforeTheGameIsStarted(){
+        for (int row=0;row<3;row++) {
+            for (int col=0;col<3;col++) {
+                assertEquals('-', ticTacToeGame.board[row][col]);
+            }
+        }
     }
 
 }
