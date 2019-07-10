@@ -41,7 +41,7 @@ public class TicTacToeGame {
         return false;
     }
 
-    public boolean checkRowsForWin() {
+    private boolean checkRowsForWin() {
         for (int row = 0; row < 3; row++) {
             if (checkWinningPattern(board[row][0], board[row][1], board[row][2]) == true) {
                 return true;
@@ -50,7 +50,7 @@ public class TicTacToeGame {
         return false;
     }
 
-    public boolean checkColumnsForWin() {
+    private boolean checkColumnsForWin() {
         for (int column = 0; column < 3; column++) {
             if (checkWinningPattern(board[0][column], board[1][column], board[2][column])) {
                 return true;
@@ -59,7 +59,7 @@ public class TicTacToeGame {
         return false;
     }
 
-    public boolean checkDiagonalsForWin () {
+    private boolean checkDiagonalsForWin () {
         if (checkWinningPattern(board[0][0], board[1][1], board[2][2])) {
             return true;
         } else {
@@ -79,9 +79,9 @@ public class TicTacToeGame {
     }
 
     protected boolean isBoardFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j] == '-') {
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 3; column++) {
+                if (board[row][column] == '-') {
                     return false;
                 }
             }
