@@ -22,4 +22,11 @@ public class TicTacToeGameTest {
         ticTacToeGame.changePlayer();
         assertEquals('O',ticTacToeGame.getCurrentPlayerMark());
     }
+
+    @Test
+    public void test_WhenCurrentPlayerIsO_thenNextPlayerIsX(){
+        ticTacToeGame.setCurrentPlayerMark('O');
+        ticTacToeGame.changePlayer();
+        assertEquals('X',ticTacToeGame.getCurrentPlayerMark());
+    }
 }
