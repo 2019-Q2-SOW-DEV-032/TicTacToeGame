@@ -31,7 +31,8 @@ public class TicTacToeGameTest {
     }
 
     @Test
-    public void test_initialiseBoardForFirstInputX(){
+    public void test_checkTheBoardIsReady_beforeTheFirstInput(){
         assertEquals('-',ticTacToeGame.getBoard());
     }
+
 }
