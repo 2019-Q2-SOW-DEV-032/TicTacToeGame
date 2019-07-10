@@ -71,7 +71,7 @@ public class TicTacToeGame {
         return (checkRowsForWin() || checkColumnsForWin() || checkDiagonalsForWin());
     }
 
-    protected boolean isBoardFull() {
+    public boolean isBoardFull() {
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
                 if (board[row][column] == '-') {
@@ -82,7 +82,7 @@ public class TicTacToeGame {
         return true;
     }
 
-    protected String checkWinOrTie() {
+    public String checkWinOrTie() {
         String gameStatus = "winner";
         if(isBoardFull() && !checkForWin()){
             gameStatus = "Tie";
