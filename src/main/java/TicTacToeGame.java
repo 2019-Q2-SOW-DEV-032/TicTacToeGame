@@ -89,12 +89,12 @@ public class TicTacToeGame {
         return true;
     }
 
-    protected char checkWinOrTie() {
-        char gameStatus = 'X';
+    protected String checkWinOrTie() {
+        String gameStatus = "winner";
         if(isBoardFull() && !checkForWin()){
-            gameStatus = 'T';
+            gameStatus = "Tie";
         }else if(checkForWin()){
-            gameStatus = this.getCurrentPlayerMark();
+            gameStatus = String.valueOf(this.getCurrentPlayerMark());
         }
         return gameStatus;
     }

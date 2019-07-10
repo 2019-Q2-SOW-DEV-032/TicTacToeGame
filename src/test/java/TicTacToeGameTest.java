@@ -128,7 +128,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.isPlaceMark(2,0);
         ticTacToeGame.changePlayer();
         ticTacToeGame.isPlaceMark(0,2);
-        assertEquals('X',ticTacToeGame.checkWinOrTie());
+        assertEquals("X",ticTacToeGame.checkWinOrTie());
     }
 
     @Test
@@ -150,7 +150,7 @@ public class TicTacToeGameTest {
         ticTacToeGame.isPlaceMark(2,2);
         ticTacToeGame.changePlayer();
         ticTacToeGame.isPlaceMark(1,2);
-        assertEquals('T',ticTacToeGame.checkWinOrTie());
+        assertEquals("Tie",ticTacToeGame.checkWinOrTie());
     }
 
 }
