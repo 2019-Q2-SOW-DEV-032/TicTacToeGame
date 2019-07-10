@@ -73,4 +73,12 @@ public class TicTacToeGameTest {
         assertTrue(ticTacToeGame.checkColumnsForWin());
     }
 
+    @Test
+    public void test_checkDiagonalsForWin_whenSimilarThreeMarksInADiagonal_thenItsAWin(){
+        ticTacToeGame.board[0][0] = 'O';
+        ticTacToeGame.board[1][1] = 'O';
+        ticTacToeGame.board[2][2] = 'O';
+        assertTrue(ticTacToeGame.checkDiagonalsForWin());
+    }
+
 }
