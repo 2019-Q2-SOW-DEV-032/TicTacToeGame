@@ -44,4 +44,9 @@ public class TicTacToeGameTest {
         assertTrue(ticTacToeGame.isPlaceMark(1,2) );
     }
 
+    @Test
+    public void test_placeMark_whenPlayerPlaceMarkInInvalidPosition_thenTheGameNotAllowsTheMarkInAThatPosition(){
+        assertFalse(ticTacToeGame.isPlaceMark(1,8) );
+    }
+
 }
