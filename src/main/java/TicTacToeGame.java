@@ -40,4 +40,13 @@ public class TicTacToeGame {
         }
         return false;
     }
+
+    public boolean checkRowsForWin() {
+        for (int i = 0; i < 3; i++) {
+            if ((board[i][0]!= '-' )&& (board[i][1]!= '-') && (board[i][2]!= '-')) {
+                return ( (board[i][0] == board[i][1]) && (board[i][0] == board[i][2]));
+            }
+        }
+        return false;
+    }
 }

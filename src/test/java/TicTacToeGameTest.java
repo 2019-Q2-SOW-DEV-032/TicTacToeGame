@@ -49,4 +49,12 @@ public class TicTacToeGameTest {
         assertFalse(ticTacToeGame.isPlaceMark(1,8) );
     }
 
+    @Test
+    public void test_checkRowsForWin_whenSimilarThreeMarksInARow_thenItsAWin(){
+        ticTacToeGame.board[0][0] = 'x';
+        ticTacToeGame.board[0][1] = 'x';
+        ticTacToeGame.board[0][2] = 'x';
+        assertTrue(ticTacToeGame.checkRowsForWin());
+    }
+
 }
