@@ -10,4 +10,10 @@ public class TicTacToeGame {
     public char getCurrentPlayerMark() {
         return currentPlayerMark;
     }
+
+    public void changePlayer() {
+        if (currentPlayerMark == 'X') {
+            currentPlayerMark = 'O';
+        }
+    }
 }
