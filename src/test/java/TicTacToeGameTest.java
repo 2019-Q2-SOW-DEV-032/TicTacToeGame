@@ -65,4 +65,12 @@ public class TicTacToeGameTest {
         assertFalse(ticTacToeGame.checkRowsForWin());
     }
 
+    @Test
+    public void test_checkColumnsForWin_whenSimilarThreeMarksInACol_thenItsAWin(){
+        ticTacToeGame.board[0][0] = 'X';
+        ticTacToeGame.board[1][0] = 'X';
+        ticTacToeGame.board[2][0] = 'X';
+        assertTrue(ticTacToeGame.checkColumnsForWin());
+    }
+
 }

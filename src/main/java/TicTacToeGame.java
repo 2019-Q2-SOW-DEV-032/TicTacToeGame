@@ -49,4 +49,13 @@ public class TicTacToeGame {
         }
         return false;
     }
+
+    public boolean checkColumnsForWin() {
+        for (int i = 0; i < 3; i++) {
+            if ((board[0][i]!= '-' )&& (board[1][i]!= '-') && (board[2][i]!= '-')) {
+                return ( (board[0][i] == board[1][i]) && (board[0][i] == board[2][i]));
+            }
+        }
+        return false;
+    }
 }
