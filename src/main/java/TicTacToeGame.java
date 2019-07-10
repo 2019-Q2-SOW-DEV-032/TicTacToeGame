@@ -1,7 +1,7 @@
 package TicTacToe;
 
 public class TicTacToeGame {
-    public char currentPlayerMark;
+    private char currentPlayerMark;
 
     public TicTacToeGame() {
         currentPlayerMark = 'X';
