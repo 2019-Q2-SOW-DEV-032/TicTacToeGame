@@ -2,9 +2,15 @@ package TicTacToe;
 
 public class TicTacToeGame {
     private char currentPlayerMark;
+    private char board;
 
     public TicTacToeGame() {
         currentPlayerMark = 'X';
+        board = '-';
+    }
+
+    public char getBoard() {
+        return board;
     }
 
     public char getCurrentPlayerMark() {

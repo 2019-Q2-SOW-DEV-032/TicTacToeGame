@@ -29,4 +29,9 @@ public class TicTacToeGameTest {
         ticTacToeGame.changePlayer();
         assertEquals('X',ticTacToeGame.getCurrentPlayerMark());
     }
+
+    @Test
+    public void test_initialiseBoardForFirstInputX(){
+        assertEquals('-',ticTacToeGame.getBoard());
+    }
 }
