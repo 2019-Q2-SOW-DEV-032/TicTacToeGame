@@ -13,6 +13,10 @@ public class TicTacToeGame {
         return board;
     }
 
+    public void setBoard(char placeMark) {
+        this.board = placeMark;
+    }
+
     public char getCurrentPlayerMark() {
         return currentPlayerMark;
     }
