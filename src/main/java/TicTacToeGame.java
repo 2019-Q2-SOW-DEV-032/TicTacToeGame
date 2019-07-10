@@ -7,6 +7,10 @@ public class TicTacToeGame {
     public TicTacToeGame() {
         currentPlayerMark = 'X';
         board = new char[3][3];
+        initializeBoard();
+    }
+
+    private void initializeBoard() {
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
                 board[row][column] = '-';
