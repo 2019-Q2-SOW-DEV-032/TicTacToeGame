@@ -89,4 +89,18 @@ public class TicTacToeGameTest {
         assertFalse(ticTacToeGame.checkForWin());
     }
 
+    @Test
+    public void test_isBoardFull_WhenAllThePositionsAreFilled_thenTheBoardIsFull(){
+        ticTacToeGame.board[0][0] = 'x';
+        ticTacToeGame.board[0][1] = 'o';
+        ticTacToeGame.board[0][2] = 'x';
+        ticTacToeGame.board[1][0] = 'o';
+        ticTacToeGame.board[1][1] = 'x';
+        ticTacToeGame.board[1][2] = 'o';
+        ticTacToeGame.board[2][0] = 'o';
+        ticTacToeGame.board[2][1] = 'x';
+        ticTacToeGame.board[2][2] = 'o';
+        assertTrue(ticTacToeGame.isBoardFull());
+    }
+
 }
