@@ -43,7 +43,7 @@ public class TicTacToeGame {
 
     private boolean checkRowsForWin() {
         for (int row = 0; row < 3; row++) {
-            if (checkWinningPattern(board[row][0], board[row][1], board[row][2]) == true) {
+            if (checkWinningPattern(board[row][0], board[row][1], board[row][2])) {
                 return true;
             }
         }
@@ -60,18 +60,11 @@ public class TicTacToeGame {
     }
 
     private boolean checkDiagonalsForWin () {
-        if (checkWinningPattern(board[0][0], board[1][1], board[2][2])) {
-            return true;
-        } else {
-            if (checkWinningPattern(board[0][2], board[1][1], board[2][0])) {
-                return true;
-            }
+        return ((checkWinningPattern(board[0][0], board[1][1], board[2][2])) || (checkWinningPattern(board[0][2], board[1][1], board[2][0])));
         }
-        return false;
-    }
 
     private boolean checkWinningPattern(char mark1, char mark2, char mark3) {
-        return !(mark1 == '-') && ((mark1 != '-' && mark1 == mark2 && mark1 == mark3));
+        return ((mark1 != '-' && mark1 == mark2 && mark1 == mark3));
     }
 
     public boolean checkForWin() {
