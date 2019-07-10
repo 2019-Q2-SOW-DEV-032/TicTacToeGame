@@ -33,8 +33,8 @@ public class TicTacToeGameTest {
     @Test
     public void test_makeSureThatTheBoardIsEmpty_BeforeTheGameIsStarted(){
         for (int row=0;row<3;row++) {
-            for (int col=0;col<3;col++) {
-                assertEquals('-', ticTacToeGame.board[row][col]);
+            for (int column=0;column<3;column++) {
+                assertEquals('-', ticTacToeGame.board[row][column]);
             }
         }
     }
